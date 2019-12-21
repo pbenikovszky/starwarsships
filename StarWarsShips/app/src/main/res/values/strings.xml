@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Star Wars Ships</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_ships">Ships</string>
+    <string name="title_favourites">Favourites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="addToFavs">Add to favourites</string>
+    <string name="starship_class">Starship class</string>
+    <string name="crew">Crew</string>
+    <string name="model_label">Model</string>
+    <string name="manufacturer_label">Manufacturer</string>
+    <string name="hyperdrive_rating_label">Hyperdrive rating</string>
+    <string name="cost_in_credit_label">Cost in credit</string>
+    <string name="fav_ships">My fav ships</string>
+</resources>

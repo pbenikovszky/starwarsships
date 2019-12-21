@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_profile">
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.pbenikovszky.starwarsships.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_ships"
+        android:name="com.pbenikovszky.starwarsships.ui.ships.ShipsFragment"
+        android:label="@string/title_ships"
+        tools:layout="@layout/fragment_ships" >
+        <action
+            android:id="@+id/action_nav_to_detail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourites"
+        android:name="com.pbenikovszky.starwarsships.ui.favourites.FavouritesFragment"
+        android:label="@string/title_favourites"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_nav__to_favDetails"
+            app:destination="@id/favDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.pbenikovszky.starwarsships.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/favDetailFragment"
+        android:name="com.pbenikovszky.starwarsships.ui.favdetail.FavDetailFragment"
+        android:label="fragment_fav_detail"
+        tools:layout="@layout/fragment_fav_detail" >
+        <argument
+            android:name="paramModel"
+            app:argType="string"
+            android:defaultValue="paramModel" />
+        <argument
+            android:name="paramManufacturer"
+            app:argType="string"
+            android:defaultValue="paramManufacturer" />
+        <argument
+            android:name="paramClass"
+            app:argType="string"
+            android:defaultValue="paramClass" />
+        <argument
+            android:name="paramCrew"
+            app:argType="string"
+            android:defaultValue="paramCrew" />
+        <argument
+            android:name="paramHyperdrive"
+            app:argType="string"
+            android:defaultValue="paramHyperdrive" />
+        <argument
+            android:name="paramCost"
+            app:argType="string"
+            android:defaultValue="paramCost" />
+        <argument
+            android:name="paramName"
+            app:argType="string"
+            android:defaultValue="paramName" />
+    </fragment>
+</navigation>

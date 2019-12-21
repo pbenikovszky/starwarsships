@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="favItem"
+            type="com.pbenikovszky.starwarsships.data.Favourite"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/grid_item_background">
+
+        <TextView
+            android:id="@+id/favNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:text="@{favItem.name}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            tools:text="Death star"/>
+
+        <ImageView
+            android:id="@+id/favShipImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_ship"
+            android:contentDescription="Ship"
+            app:layout_constraintTop_toBottomOf="@+id/favNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/favClassText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="12sp"
+            android:text="@{favItem.model}"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/favShipImage"
+            tools:text="Death star"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
